@@ -16,6 +16,10 @@ html {
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 100vh;
 }
 
 h1,
@@ -47,15 +51,16 @@ ol {
   white-space: nowrap;
 }
 
-.content {  
+.content {    
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 30px;
-  padding-top: 133px;    
+  gap: 30px;  
+  margin: 133px 30px;
+  
 }
 
-/* search-form Start*/
+/* search-form Start padding-top: 133px;  */
 
 .search-form {
   display: flex;  
@@ -111,7 +116,7 @@ ol {
   border-bottom: 1px solid #FFF; 
   padding-top: 6px; 
   padding-bottom: 4px;
-  color: rgba(255, 255, 255, 0.70);
+  color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -121,12 +126,12 @@ ol {
   appearance: none;    
 }
 
-.search-form__textfield:focus {
-  outline: none;
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.70);  
 }
 
-.search-form__textfield:focus-visible {
-  outline: 1px solid #fff;
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__textfield:active {
@@ -151,10 +156,6 @@ ol {
   width: fit-content;   
   margin-top: 4px;
   cursor: pointer;
-}
-
-.search-form__label:focus {
-  outline: none;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -237,11 +238,6 @@ ol {
   text-transform: uppercase;
 }
 
-.content__card-link {
-  color: #FFF;
-  text-decoration: none;
-}
-
 .content__video-card-title {
   width: 200px;
   padding-bottom: 6px;
@@ -259,33 +255,20 @@ ol {
 }
 
 .button {
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 194px;
-  height: 34px;
+  min-height: 34px;  
   border: 1px solid #FFF;
-  background: transparent;
-  cursor: pointer;
-}
-
-.more-button {
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  width: 399px;
-  height: 34px;
   color: #FFF;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed';
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
-  text-align: center;  
+  text-align: center; 
+  background-color: rgb(0 0 0/ 0); 
+}
+
+.more-button {  
+  width: 399px;
 }
 
 .button:focus {
@@ -311,8 +294,10 @@ ol {
 
 
 .content__card-link {
-  display: block; 
+  display: block;   
   margin: 2px; 
+  color: #FFF;
+  text-decoration: none;
 }
 
 .content__card-link:active {
@@ -329,4 +314,8 @@ ol {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
