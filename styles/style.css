@@ -52,11 +52,11 @@ ol {
 }
 
 .content {    
-  display: flex;
-  justify-content: center;
+  display: flex;  
   align-items: flex-end;
-  gap: 30px;  
-  margin: 133px 30px;  
+  gap: 30px; 
+  width: 1140px;  
+  margin: 133px 30px; 
 }
 
 /* search-form Start padding-top: 133px;  */
@@ -139,14 +139,7 @@ ol {
 
 .search-form__submit-button {
   align-self: end;  
-  width: 194px;
-  height: 34px;
-  color: #FFF;  
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  font-style: normal;
-  line-height: normal;
+  width: 194px;  
 }
 
 .search-form__label {
